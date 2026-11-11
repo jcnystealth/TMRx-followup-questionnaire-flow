@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply m-0 bg-slate-50 font-sans text-slate-800 antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-slate-700;
+  }
+}
+
+@layer components {
+  .skip-link {
+    @apply sr-only;
+  }
+
+  .skip-link:focus {
+    @apply not-sr-only fixed top-4 left-4 z-50 rounded bg-white px-4 py-3 shadow;
+  }
+}
